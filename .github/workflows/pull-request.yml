@@ -1,7 +1,7 @@
 name: Pull Request Validation
 on: pull_request
 jobs:
-  test:
+  Test-Solution:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -18,7 +18,7 @@ jobs:
     - name: Run tests
       run: dotnet test --no-restore --verbosity normal
     
-  semver:  
+  Validate-Semantic-Version:  
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,4 +27,4 @@ jobs:
         with:
           mode: validate
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          noop-label: 'documentation'
+          noop-labels: 'documentation'
