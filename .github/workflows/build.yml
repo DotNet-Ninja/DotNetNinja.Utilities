@@ -11,6 +11,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      
+      - name: 'Get Version Tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
+        with:
+          fallback: 0.1.0 # Optional fallback tag to use when no tag can be found
+          #workingDirectory: another/path/where/a/git/repo/is/checked/out # Optional alternative working directory
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -27,7 +34,10 @@ jobs:
         run: dotnet test --no-build --configuration Release --verbosity normal
 
       - name: Pack the NuGet package
-        run: dotnet pack --no-build --configuration Release --output ./artifacts --version ${{ steps.vars.outputs.PACKAGE_VERSION }}
+        run: dotnet pack --no-build --configuration Release --output ./artifacts --version ${{ steps.previoustag.outputs.tag }}
+
+      - name: Log Artifacts
+        run: ls ./artifacts
 
       # - name: Publish the NuGet package
       #   if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
