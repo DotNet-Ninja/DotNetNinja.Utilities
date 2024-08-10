@@ -37,7 +37,7 @@ jobs:
         run: dotnet pack --no-build --configuration Release --output ./artifacts --version ${{ steps.previoustag.outputs.tag }}
 
       - name: Log Artifacts
-        run: ls ./artifacts
+        run: find . -type d -name "artifacts" -exec find {} -type f \;
 
       # - name: Publish the NuGet package
       #   if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
