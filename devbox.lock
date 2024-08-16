@@ -1,0 +1,53 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "dotnet-sdk_8@latest": {
+      "last_modified": "2024-08-01T02:09:53Z",
+      "resolved": "github:NixOS/nixpkgs/799bc8d7b16e6779f0105713e6794899133c4a38#dotnet-sdk_8",
+      "source": "devbox-search",
+      "version": "8.0.303",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/sshyq1cabalwham770541nrrd18xc6fh-dotnet-sdk-8.0.303",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/sshyq1cabalwham770541nrrd18xc6fh-dotnet-sdk-8.0.303"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/g3gsyydxg3x25kw6l1q0sghqvxrcj0gx-dotnet-sdk-8.0.303",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/g3gsyydxg3x25kw6l1q0sghqvxrcj0gx-dotnet-sdk-8.0.303"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/c6szmz16fn1mzjs0x4rgq8m7pv759lxl-dotnet-sdk-8.0.303",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/c6szmz16fn1mzjs0x4rgq8m7pv759lxl-dotnet-sdk-8.0.303"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mh30q73z8bwp1qdrng7mx3zzxna0ll6b-dotnet-sdk-8.0.303",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mh30q73z8bwp1qdrng7mx3zzxna0ll6b-dotnet-sdk-8.0.303"
+        }
+      }
+    }
+  }
+}
